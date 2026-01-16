@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background: #faf7f3;
+  color: #444;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+.typing {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.main-text p {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.main-text span {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 22px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* GALLERY */
+.gallery {
+  padding: 80px 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.card::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s;
+  font-size: 20px;
+}
+
+.card:hover::after,
+.card:hover img {
+  opacity: 1;
+}
+
+/* LETTER */
+.letter {
+  padding: 100px 20%;
+  background: #fffdf9;
+}
+
+.letter h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.letter hr {
+  width: 60px;
+  margin: 20px auto;
+}
+
+.letter p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.sign {
+  text-align: right;
+}
+
+/* CLOSING */
+.closing {
+  height: 100vh;
+  background: #f3efe9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.closing h1 {
+  font-size: 42px;
+}
+
+.closing span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.closing p {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .letter {
+    padding: 80px 10%;
+  }
+}

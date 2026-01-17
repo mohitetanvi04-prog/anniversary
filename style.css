@@ -90,8 +90,7 @@ body {
   font-size: 20px;
 }
 
-.card:hover::after,
-.card:hover img {
+.card:hover::after {
   opacity: 1;
 }
 
@@ -119,6 +118,26 @@ body {
 
 .sign {
   text-align: right;
+}
+
+/* MEMORY IMAGE (IMG 8) */
+.memory {
+  padding: 80px 20px;
+  text-align: center;
+  background: #faf7f3;
+}
+
+.memory img {
+  max-width: 320px;
+  width: 85%;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.memory p {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
 }
 
 /* CLOSING */
@@ -156,22 +175,3 @@ body {
     padding: 80px 10%;
   }
 }
-.memory {
-  padding: 80px 20px;
-  text-align: center;
-  background: #faf7f3;
-}
-
-.memory img {
-  max-width: 320px;
-  width: 80%;
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
-
-.memory p {
-  font-size: 18px;
-  color: #555;
-  font-style: italic;
-}
-
